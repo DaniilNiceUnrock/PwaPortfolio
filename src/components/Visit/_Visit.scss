@@ -1,0 +1,132 @@
+.visit {
+    //background-color: #172F51;
+    min-height: 100vh;
+    text-align: center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-image: url("../../assets/bg/top.webp");
+    background-size: cover;
+}
+.preview{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding-top: 14%;
+    &_image {
+        flex: auto;
+        padding: 0 3rem 0 0;
+        &__img {
+            width: 100%;
+        }
+    }
+    &_info {
+        flex: 70%;
+        &_text {
+            &__name {
+                font-size: 4.2rem;
+                white-space: nowrap; 
+                color: #fff;
+    
+            }   
+            &__who  {
+                color: gray;
+                font-size: 3rem;
+                margin-top: 48px;
+            }
+        }
+        &_social {
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+            margin-top: 70px;
+                &__a{
+                    width: 40px;
+                }
+        }
+    }
+}
+.header_toMain {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.header_toMain:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: $desktop) {
+    .visit {
+        background-position-x: 0%;
+    }
+    .preview {
+        padding-top: 20%;
+    }
+    .preview_info_text__name {
+        font-size: 3.8rem;
+    }
+    .preview_info_text__who {
+        font-size: 2.5rem;
+    } 
+}
+@media screen and (max-width: $bigtablets) {
+    .visit {
+        background-position-x: 19%;
+    }
+    .preview {
+        padding-top: 20%;
+    }
+    .preview_info_text__name {
+        font-size: 3.2rem;
+    }
+    .preview_info_text__who {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: $tablets) {
+    .visit {
+        background-position-x: 31%;
+    }
+    .preview {
+        padding-top: 35%;
+    }
+    .preview_info_text__name {
+        font-size: 3rem;
+    }
+    .preview_info_text__who {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .visit {
+        background-position-x: 45%;
+    }
+    .preview {
+        padding-top: 50%;
+    }
+    .preview_info_text__name {
+        font-size: 2.5rem;
+    }
+    .preview_info_text__who {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: $phones) {
+    .visit {
+        background-position-x: 46%;
+    }
+    .preview {
+        padding-top: 50%;
+    }
+    .preview_info_text__name {
+        font-size: 2rem;
+    }
+    .preview_info_text__who {
+        font-size: 1rem;
+    }
+}

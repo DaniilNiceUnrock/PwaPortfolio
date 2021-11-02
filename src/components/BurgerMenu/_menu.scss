@@ -1,0 +1,84 @@
+@media screen and (min-width: 769px) {
+
+  .bm-burger-button {
+    display: none;
+  }
+}
+.bm-burger-button {
+  position: absolute;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 66px;
+  cursor: pointer;
+}
+.bm-burger-button.hidden {
+  display: none;
+}
+
+.bm-burger-bars {
+  background-color: #fff;
+}
+.line-style {
+  position: absolute;
+  height: 20%;
+  left: 0;
+  right: 0;
+}
+.cross-style {
+  position: absolute;
+  top: 12px;
+  right: 2px;
+  cursor: pointer;
+}
+.bm-cross {
+  background: #fff;
+}
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+  right: 85% !important;
+}
+.bm-cross-button.hidden {
+  display: none;
+}
+.bm-menu {
+  box-shadow: 25px 0px 5px 30px rgba(50, 50, 50, 0.75);
+  border-left: 2px solid rgb(39, 36, 36);
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: $black; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 40px; /* Place content 60px from the top */
+  transition: 0.6s; /*0.5 second transition effect to slide in the sidenav*/
+}
+
+a {
+  color: rgb(230, 93, 15);
+}
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.795);
+}
+.bm-item-list {
+  color: #fff !important;
+  margin-left: 10%;
+  font-size: 20px;
+}
+.bm-item-list > * {
+  display: flex;
+  text-decoration: none;
+  padding: 0.7em;
+}
+.bm-item-list > * > span {
+  margin-left: 10px;
+  font-weight: 700;
+  color: white !important;
+}
+
+.active {
+  color: #000 !important;
+}

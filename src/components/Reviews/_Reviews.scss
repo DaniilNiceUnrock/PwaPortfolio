@@ -1,0 +1,52 @@
+.Reviews {
+  max-width: 1040px;
+  padding-top: 4%;
+  &_h2 {
+    font-size: 2.7rem;
+  }
+}
+.slide {
+  min-height: 260px;
+  padding: 5% 5% 0 5%;
+  display: flex;
+  flex-direction: column;
+  &_author {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    &__image {
+      border-radius: 50%;
+    }
+    &__name {
+      margin-left: 5%;
+      font-size: 1rem;
+    }
+  }
+  &_body {
+    min-height: 111px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 5%;
+    &__text { 
+      font-size: 1rem;
+      text-align: left;
+    }
+    &__date {
+      color: $gray-600;
+      font-size: .7rem;
+      text-align: right;
+    }
+  }
+}
+
+@media screen and (max-width: $bigtablets) {
+  .Reviews {
+    max-width: 100% !important;
+    padding-top: 4%;
+    &_h2 {
+      font-size: 2.7rem;
+    }
+  }
+}

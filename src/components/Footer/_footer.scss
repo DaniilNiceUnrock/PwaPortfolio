@@ -1,0 +1,96 @@
+.footer {
+    padding: 2.938rem 0 2.625rem;
+    background-color: $background_footer;
+    color: $white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;    
+    justify-content: space-around;
+    &_date {
+        color: $white;
+        text-align: center;
+        font-size: 3rem;
+    }
+    &_nameme {
+        &__name {
+            font-size: 1.2rem;
+            color: $white;
+        }
+        &__who {
+            font-size: 1rem;
+            color: $gray-400;
+        }
+    }
+    &_socials {
+        &__a {
+            padding-right: 10px;
+        }
+        &__img {
+            width: 40px;
+            &:hover {
+                border-bottom: 2px solid #fff;
+                opacity: 1;
+                transition: 300ms;
+            }
+        }
+    }
+    &_termius {
+        width: 28em;
+        text-align: right;
+        &__text {
+            font-size: 1rem;
+            color: $white;
+            
+        }
+        &__who  {
+            color: $gray-400;
+            font-size: 1rem;
+        }
+    }
+}
+
+@media screen  and (max-width: $desktop){
+    .footer {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+            &_termius {
+                width: 86%;
+            
+            }
+            &_date {   
+                font-size: 2.5rem;
+            }
+            &_termius {
+                padding-top: 10px;
+                text-align: center;
+                width: 94%;
+                font-size: .8rem;
+            }
+    }      
+}
+
+@media screen and (max-width: $phones) {
+    .footer {
+        flex-direction: column;
+        align-content: center;
+        &_date {
+            order: 3;
+            font-size: 2.5rem;
+            
+        }
+        &_nameme {
+            order: 1;
+            text-align: center;
+        }
+        &_socials {
+            order: 2;
+        }
+        &_termius {
+            padding-top: 10px;
+            text-align: center;
+            width: 94%;
+            order: 4;
+        }
+    }    
+}

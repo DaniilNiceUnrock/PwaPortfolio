@@ -1,0 +1,128 @@
+    .main_SliderWorks {
+        width: 100%;
+        max-width: 1040px;
+        padding-top: 4%;
+        &_head {
+            font-size: 2.7rem;
+        }
+    }
+    .containertest {
+        width: 100%;
+        margin: 0;
+        margin-top: 2%;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        height: 60vh;
+        overflow: hidden;
+        align-items: center;
+    }
+    .slide {
+        height: 60vh;
+        border-radius: 20px;
+        margin: 3px;
+        cursor: pointer;
+        color: aliceblue;
+        flex: 1;
+        background-size: cover;
+        z-index: 2;
+        background-position: top;
+        background-repeat: no-repeat;
+        position: relative;
+        transition: all 500ms ease-in-out;
+    }
+    .slide a {
+        position: absolute;
+        bottom: 10px;
+        font-size: 24px;
+        left: 20px;
+        z-index: 10;
+        color: #fff;
+
+        margin: 0;
+        opacity: 0;
+    }
+    .slide.active {
+        flex: 10;
+    }
+    .slide.active a {
+        background: aliceblue;
+        border-radius: 15px;
+        padding: 7px;
+        opacity: 1;
+        z-index: 10;
+        transition: opacity 0.3s ease-in;
+    }
+    .slide.active a:hover {
+        text-decoration: underline;
+        background: rgba(186, 198, 207, 0.74);
+        border-radius: 14px;
+        padding: 11px;
+        z-index: 10;
+        transition: 0.3s ease-in;
+    }
+
+@media screen and (max-width: $tablets) {
+    .containertest {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        margin-top: 2%;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .slide {
+        height: 60vh;
+        border-radius: 20px;
+        margin: 5px;
+        min-width: 45%;
+        cursor: pointer;
+        color: aliceblue;
+        flex: 1;
+        background-size: cover;
+        z-index: 2;
+        background-position: top;
+        background-repeat: no-repeat;
+        position: relative;
+        transition: all 500ms ease-in-out;
+        order: 2;
+    }
+    .slide a {
+        position: absolute;
+        bottom: 10px;
+        font-size: 24px;
+        left: 20px;
+        z-index: 10;
+        color: #fff;
+
+        margin: 0;
+        opacity: 0;
+    }
+    .slide.active {
+        min-width: 100%;
+        order: 1;
+    }
+    .slide.active a {
+        background: aliceblue;
+        border-radius: 15px;
+        padding: 7px;
+        opacity: 1;
+        z-index: 10;
+        transition: opacity 0.3s ease-in;
+    }
+    .slide.active a:hover {
+        text-decoration: underline;
+        background: rgba(186, 198, 207, 0.74);
+        border-radius: 14px;
+        padding: 11px;
+        z-index: 10;
+        transition: 0.3s ease-in;
+
+    }
+
+}
