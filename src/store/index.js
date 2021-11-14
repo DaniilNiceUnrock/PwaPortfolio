@@ -19,13 +19,15 @@ export default new Vuex.Store({
   },
   actions: {
     async getMySkills({ commit }) {
-      axios.get('https://webdev-api.loftschool.com/categories/461')
+      axios.get('http://localhost:3000/api/skills/')
           .then(response => {
-              commit('SET_MYSKILLS', response.data)
+              commit('SET_MYSKILLS', response.data) 
+
+              
       })
     },
     async getReviews({ commit }) {
-      axios.get('https://webdev-api.loftschool.com/reviews/461')
+      axios.get('http://localhost:3000/api/skills/')
           .then(response => {
               commit('SET_REVIEWS', response.data)
       })

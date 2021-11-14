@@ -1,7 +1,9 @@
 <template >
+
     <intersect @enter="visible = true" @leave="visible = true">
-        <div class="container_skills" id="MySkills"  >
+        <div class="container_skills" id="MySkills">
             <h2 class="MySkills_head">Мои навыки</h2>
+            {{MySkills}}
             <div class="skills" >
                 <div class="skills_img">
                     <img class="skills_img__img" src="../../assets/bg/back2.webp" alt="">
@@ -38,23 +40,20 @@
 </template>
 
 <script>
-import Intersect from 'vue-intersect'
-
+import Intersect from 'vue-intersect';
+import axios from 'axios';
 
 export default {
     data: () => ({
         val: 0,
-        visible: false
+        visible: false,
     }),
-    methods: {
-        
-    },
     mounted() {
         this.$store.dispatch("getMySkills");
     },
     computed: {
         MySkills() {
-            return this.$store.state.MySkills
+           return this.$store.state.MySkills;
         }
     },
     components: {
