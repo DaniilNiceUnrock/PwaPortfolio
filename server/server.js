@@ -5,6 +5,7 @@ const path = require('path');
 const cors = require('cors')
 
 const app = express();
+const { TextEncoder, TextDecoder } = require("util");
 
 //console.log("порт");
 app.set('port', 3000);
