@@ -11,6 +11,7 @@
     "axios": "^0.21.4",
     "concurrently": "^6.3.0",
     "core-js": "^3.6.5",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-graphql": "^0.12.0",
     "graphql": "^16.0.1",
@@ -46,5 +47,7 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "main": "index.js",
+  "license": "MIT"
 }

@@ -6,5 +6,6 @@ const Skills = new Schema({
     precent: Number
 });
 
-module.exports = mongoose.model('Skills', Skills);
+/* db.Skills.insertOne({"name": "Test", "precent": 28}) */
 
+module.exports = mongoose.model('Skills', Skills);
