@@ -13,5 +13,4 @@ router.post('/', async (req, res) => {
     res.json({state: 'Автор добавлен'});
 });
 
-
 module.exports = router;
