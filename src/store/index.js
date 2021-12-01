@@ -21,7 +21,7 @@ export default new Vuex.Store({
     async getMySkills({ commit }) {
       axios.get('api/skills')
           .then(response => {
-              commit('SET_MYSKILLS', response.data.data)  
+              commit('SET_MYSKILLS', response.data)  
               console.log(response);
               console.log("refefewfewf");
               console.log(response.data);
