@@ -23,7 +23,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(morgan('dev'));
 
 app.use(cors({
-    origin: 'http://localhost:8080'
+    origin: 'http://104.198.229.231'
 }));
 app.use('/api/records', require('./routes/records'));
 app.use('/api/skills', require('./routes/skills'));
