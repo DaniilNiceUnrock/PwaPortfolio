@@ -43,7 +43,7 @@
 <script>
 import Intersect from 'vue-intersect';
 import axios from 'axios';
-axios.defaults.baseURL  = "https://webdev-api.loftschool.com";
+axios.defaults.baseURL  = "http://104.198.229.231";
 export default {
     data: () => ({
         val: 0,
@@ -62,7 +62,7 @@ export default {
         Intersect ,
     },
     async created() {
-        const { data } = await axios.get("/categories/1");
+        const { data } = await axios.get("/api/skills/");
         this.skills = data;
     }
 }
