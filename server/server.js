@@ -9,7 +9,7 @@ const app = express();
 //console.log("порт");
 app.set('port', 3000);
 app.listen(app.get('port'), () => {
-    console.log(`[OK] Server is running on localhost:${app.get('port')}`);
+    console.log(`[OK] Server is running on http://104.198.229.231/:${app.get('port')}`);
 });
 
 
@@ -23,7 +23,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(morgan('dev'));
 
 app.use(cors({
-    origin: 'http://104.198.229.231:8080'
+    origin: 'http://localhost:8080'
 }));
 app.use('/api/records', require('./routes/records'));
 app.use('/api/skills', require('./routes/skills'));
