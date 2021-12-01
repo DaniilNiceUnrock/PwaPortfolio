@@ -4,16 +4,19 @@
         <div class="container_skills" id="MySkills">
             <h2 class="MySkills_head">Мои навыки</h2>
             {{MySkills}}
+            <p>
+                skills
+            </p>
             {{skills}}
             <div class="skills" >
                 <div class="skills_img">
                     <img class="skills_img__img" src="../../assets/bg/back2.webp" alt="">
                 </div>
-                <div class="skills_block" v-if="skills.length">
+                <div class="skills_block" v-if="1===1">
                     <div class="skills_myskills" v-for="skill in skills" :key="skill._id" >
                         <span class="skills_myskills__header"> {{skill.name}} </span>
                         <div class="skills_myskills__skill">
-                            <div class="skills_myskills__circle" v-for="skill2 in category.skills2" :key="skill2._id">
+                            <div class="skills_myskills__circle" v-for="skill2 in skill.skills2" :key="skill2._id">
                                 <div class="skills_myskills_skill__items">
                                         <vue-ellipse-progress 
                                             color="#1565c0"
@@ -62,7 +65,7 @@ export default {
         Intersect ,
     },
     async created() {
-        const { data } = await axios.get("/api/skills/");
+        const { data } = await axios.get("/api/skills");
         this.skills = data;
     }
 }
