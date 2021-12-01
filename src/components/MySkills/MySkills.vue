@@ -4,6 +4,7 @@
         <div class="container_skills" id="MySkills">
             <h2 class="MySkills_head">Мои навыки</h2>
             {{MySkills}}
+            {{skills}}
             <div class="skills" >
                 <div class="skills_img">
                     <img class="skills_img__img" src="../../assets/bg/back2.webp" alt="">
@@ -42,11 +43,12 @@
 <script>
 import Intersect from 'vue-intersect';
 import axios from 'axios';
-
+axios.defaults.baseURL  = "https://webdev-api.loftschool.com";
 export default {
     data: () => ({
         val: 0,
         visible: false,
+         skills: [],
     }),
     mounted() {
         this.$store.dispatch("getMySkills");
@@ -58,6 +60,10 @@ export default {
     },
     components: {
         Intersect ,
+    },
+    async created() {
+        const { data } = await axios.get("/categories/1");
+        this.skills = data;
     }
 }
 </script>
