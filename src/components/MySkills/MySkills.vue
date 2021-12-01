@@ -9,8 +9,8 @@
                 <div class="skills_img">
                     <img class="skills_img__img" src="../../assets/bg/back2.webp" alt="">
                 </div>
-                <div class="skills_block" v-if="MySkills.length">
-                    <div class="skills_myskills" v-for="skill in MySkills" :key="skill._id" >
+                <div class="skills_block" v-if="skills.length">
+                    <div class="skills_myskills" v-for="skill in skills" :key="skill._id" >
                         <span class="skills_myskills__header"> {{skill.name}} </span>
                         <div class="skills_myskills__skill">
                             <div class="skills_myskills__circle" v-for="skill2 in category.skills2" :key="skill2._id">
