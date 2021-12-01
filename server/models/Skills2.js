@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 
 const Skills2 = new Schema({
   name : String,
-  test: Number,
+  percent: Number,
 });
 
 
