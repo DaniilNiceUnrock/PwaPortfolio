@@ -23,10 +23,10 @@
                                             :size="140"
                                             mode="out-over" 
                                             :legend="true"
-                                            :progress = skill.percent 
+                                            :progress = skill2.percent 
                                             v-if="visible"
                                         >
-                                        <span class="present">{{skill.name}}  <br> {{skill.percent}}% <br> </span>
+                                        <span class="present">{{skill2.name}}  <br> {{skill2.percent}}% <br> </span>
                                         </vue-ellipse-progress>
                                 </div>
                             </div>
