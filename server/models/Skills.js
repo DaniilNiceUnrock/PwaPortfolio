@@ -8,7 +8,7 @@ const Skills = new Schema({
   name : String,
   skills2: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Skills2'
+    ref: 'skills2'
    }
 });
 
