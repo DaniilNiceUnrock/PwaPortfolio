@@ -8,5 +8,4 @@ const Author = new Schema({
     date_of_death: Date
 });
 
-
 module.exports = mongoose.model('Author', Author);
