@@ -2,10 +2,11 @@ const express = require('express');
 const router = express.Router();
 
 const Skills = require('../models/Skills');
-const Skills2 = require('../models/Skills2');
 
-router.get('/', async (req, res) => {
-    res.json(await Skills.find());
+
+router.get('/', async (req, res) => { 
+    const skills = await Skills.find().populate("skills2");
+    res.json(skills);
 });
 
 router.post('/', async (req, res) => {
