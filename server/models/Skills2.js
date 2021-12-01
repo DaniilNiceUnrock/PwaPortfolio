@@ -3,7 +3,6 @@ const { Schema } = mongoose;
 
 
 const Skills2 = new Schema({
-  id: Number,
   name : String,
   test: Number,
 });

@@ -13,5 +13,9 @@ router.post('/', async (req, res) => {
     await skills2.save();
     res.json({state: 'скилл2 добавлен'});
 });
+router.delete('/:id', async (req, res) => {
+    await Skills2.findByIdAndRemove(req.params.id);
+    res.json({state: 'deleted'});
+});
 
 module.exports = router;
