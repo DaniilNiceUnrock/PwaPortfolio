@@ -25,6 +25,7 @@ app.use(morgan('dev'));
 
 app.use('/api/records', require('./routes/records'));
 app.use('/api/skills', require('./routes/skills'));
+app.use('/api/skills2', require('./routes/skills2'));
 app.use('/api/author', require('./routes/author'));
 
 app.use('/', express.static(path.join(__dirname, '../dist')));
