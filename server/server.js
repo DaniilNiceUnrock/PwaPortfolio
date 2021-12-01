@@ -13,10 +13,14 @@ app.listen(app.get('port'), () => {
 });
 
 
-mongoose.connect('mongodb://localhost:27017/PWA', { useNewUrlParser: true })
-
-.then(db => console.log('[OK] DB is connected !'))
-.catch(err => console.error(err));
+const { MongoClient } = require('mongodb');
+const uri = "mongodb+srv://Daniil:090974papa@cluster0.wbyey.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));

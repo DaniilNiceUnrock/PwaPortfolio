@@ -9,4 +9,3 @@ const Record = new Schema({
 });
 
 module.exports = mongoose.model('Record', Record);
-
