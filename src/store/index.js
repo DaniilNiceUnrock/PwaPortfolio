@@ -25,7 +25,8 @@ export default new Vuex.Store({
               console.log(response);
               console.log("refefewfewf");
               console.log(response.data);
-              console.log(response.data.data);
+              console.log("rr32r32r32r23rr32");
+              console.log(response.data.0);
 
       })
     },
