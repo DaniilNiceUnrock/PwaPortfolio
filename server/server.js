@@ -13,7 +13,7 @@ app.listen(app.get('port'), () => {
 });
 
 
-mongoose.connect('mongodb+srv://Daniil:090974papa@cluster0.wbyey.mongodb.net/PWA?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://Daniil:090974papa@cluster0.wbyey.mongodb.net/PWA', { useNewUrlParser: true })
 
 .then(db => console.log('[OK] DB is connected !'))
 .catch(err => console.error(err));
