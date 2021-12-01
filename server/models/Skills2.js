@@ -9,4 +9,4 @@ const Skills2 = new Schema({
 });
 
 
-module.exports = mongoose.model('Skills2', Skills2);
+module.exports = mongoose.model('skills2', Skills2);
