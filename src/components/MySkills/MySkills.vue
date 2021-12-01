@@ -7,7 +7,7 @@
                 <div class="skills_img">
                     <img class="skills_img__img" src="../../assets/bg/back2.webp" alt="">
                 </div>
-                <div class="skills_block" v-if="MySkill.lenght">
+                <div class="skills_block" v-if="MySkill.length">
                     <div class="skills_myskills" v-for="skill in skills" :key="skill._id" >
                         <span class="skills_myskills__header"> {{skill.name}} </span>
                         <div class="skills_myskills__skill">
