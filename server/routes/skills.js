@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     const skills = new Skills(req.body);
     await skills.save();
-    res.json({state: 'success skills'});
+    res.json({state: 'скилл добавлен'});
 });
 
 router.get('/:id', async (req, res) => {
