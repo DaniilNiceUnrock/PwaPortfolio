@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const Skills2 = require('../models/Skills2');
+const Skills = require('../models/Skills');
 
 router.get('/', async (req, res) => {
     res.json(await Skills2.find());
