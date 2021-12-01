@@ -1,15 +1,30 @@
-var mongoose = require('mongoose')
-  , Schema = mongoose.Schema
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-var authorSchema = Schema({
-  name    : String,
-  stories : [{ type: Schema.Types.ObjectId, ref: 'Story' }]
+var Author = new Schema(
+  {
+    first_name: {type: String, required: true, max: 100},
+    family_name: {type: String, required: true, max: 100},
+    date_of_birth: {type: Date},
+    date_of_death: {type: Date},
+  }
+);
+
+// Виртуальное свойство для полного имени автора
+/*AuthorSchema
+.virtual('name')
+.get(function () {
+  return this.family_name + ', ' + this.first_name;
 });
 
-var storySchema = Schema({
-  author : { type: Schema.Types.ObjectId, ref: 'Author' },
-  title    : String
+// Виртуальное свойство - URL автора
+AuthorSchema
+.virtual('url')
+.get(function () {
+  return '/catalog/author/' + this._id;
 });
 
-var Story  = mongoose.model('Story', storySchema);
-var Author = mongoose.model('Author', authorSchema);
+*/
+//Export model
+module.exports = mongoose.model('Author', Author);
+
