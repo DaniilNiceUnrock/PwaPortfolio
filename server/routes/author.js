@@ -8,8 +8,8 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-    const author = new Author(req.body);
-    await author.save();
+    const Author = new Author(req.body);
+    await Author.save();
     res.json({state: 'Автор добавлен'});
 });
 
