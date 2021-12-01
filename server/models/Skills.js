@@ -3,7 +3,7 @@ const { Schema } = mongoose;
 
 const Skills = new Schema({
     category: String,
-    skills: String  [
+    skills: [
         {   
             id: Number,
             name : String,
