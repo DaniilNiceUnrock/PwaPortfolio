@@ -4,7 +4,6 @@ const { Schema } = mongoose;
 
 
 const Skills = new Schema({
-  id: Number,
   name : String,
   skills2: {
     type: mongoose.Schema.Types.ObjectId,
