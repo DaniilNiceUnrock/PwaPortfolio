@@ -7,7 +7,7 @@ const Skills2 = require('../models/Skills2');
 
 router.get('/', async (req, res) => { 
     const skills = await Skills.find().populate("skills2");
-    res.json(skills);
+    res.json({state: "ХУЕТА"});
 });
 
 router.post('/', async (req, res) => {
