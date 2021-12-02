@@ -9,11 +9,11 @@
                     <div class="slide">
                         <div class="slide_author">
                             <img :src="`https://webdev-api.loftschool.com/`+review.photo" alt="" class="slide_author__image" width="100px" height="100px">
-                            <p class="slide_author__name">{{review.author}}</p>
+                            <p class="slide_author__name">{{review.name}}</p>
                         </div>
                         <div class="slide_body">
-                            <div class="slide_body__text">{{review.text}}</div>
-                            <div class="slide_body__date">{{review.created_at}}</div>
+                            <div class="slide_body__text">{{review.body}}</div>
+                            <div class="slide_body__date">{{review.publishedAt}}</div>
                         </div>
                     </div>                 
                 </slide>
