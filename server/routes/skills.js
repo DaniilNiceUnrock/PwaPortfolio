@@ -5,7 +5,7 @@ const Skills = require('../models/Skills');
 
 
 router.get('/', async (req, res) => { 
-const skills = await Skills.find().populate("skills2");
+    const skills = await Skills.find().populate("skillsbodies");
     res.json(skills);
 });
 
@@ -13,17 +13,6 @@ router.post('/', async (req, res) => {
     const skills = new Skills(req.body);
     await skills.save();
     res.json({state: 'Категория для скиллов добавлена'});
-});
-
-
-router.get('/', async (req, res) => {
-    res.json(await Skills2.find());
-});
-
-router.post('/', async (req, res) => {
-    const skills2 = new Skills2(req.body);
-    await skills2.save();
-    res.json({state: 'скилл2 добавлен'});
 });
 
 router.get('/:id', async (req, res) => {

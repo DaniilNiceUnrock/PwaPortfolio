@@ -25,6 +25,6 @@ app.use(morgan('dev'));
 
 app.use('/api/rewiews', require('./routes/rewiews'));// отзывы 
 app.use('/api/skills', require('./routes/skills')); //категория скиллов
-app.use('/api/skillsbody', require('./routes/skillsbody')); // сами скиллы, которые связаны с категорией скиллов
+app.use('/api/skillsbodies', require('./routes/skillsbodies')); // сами скиллы, которые связаны с категорией скиллов
 
 app.use('/', express.static(path.join(__dirname, '../dist')));

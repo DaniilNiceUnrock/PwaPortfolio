@@ -5,9 +5,9 @@ const { Schema } = mongoose;
 
 const Skills = new Schema({
   name : String,
-  skillsbody: [{
+  Skillsbodies: [{
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'skillsbody'
+    ref: 'skillsbodies'
    }
   ]
 });
