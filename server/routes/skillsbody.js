@@ -8,8 +8,8 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-    const skills2 = new Skills2(req.body);
-    await skills2.save();
+    const skillsBody = new SkillsBody(req.body);
+    await skillsBody.save();
     res.json({state: 'Cкилл добавлен'});
 });
 router.delete('/:id', async (req, res) => {
