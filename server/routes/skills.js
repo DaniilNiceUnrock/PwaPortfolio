@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 
 const Skills = require('../models/Skills');
-const Skills2 = require('../models/Skills2');
 
 
 router.get('/', async (req, res) => { 
@@ -13,7 +12,7 @@ const skills = await Skills.find().populate("skills2");
 router.post('/', async (req, res) => {
     const skills = new Skills(req.body);
     await skills.save();
-    res.json({state: 'скилл добавлен'});
+    res.json({state: 'Категория для скиллов добавлена'});
 });
 
 
