@@ -3,7 +3,7 @@
             <span class="Reviews_h2">
                 Отзывы обо мне
             </span>
-            {{Reviews}}
+        
             <carousel :per-page="items"  :loop="true" :autoplay="false" :navigationEnabled="false" :navigate-to="someLocalProperty" :mouse-drag="true" v-if="Reviews.length" >
                 <slide  v-for="review in Reviews" :key="review.id">
                     <div class="slide">
