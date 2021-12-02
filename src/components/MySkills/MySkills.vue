@@ -11,7 +11,7 @@
                     <div class="skills_myskills" v-for="skill in MySkills" :key="skill._id" >
                         <span class="skills_myskills__header"> {{skill.name}} </span>
                         <div class="skills_myskills__skill">
-                            <div class="skills_myskills__circle" v-for="skill2 in skill.skillsBody" :key="skill2._id">
+                            <div class="skills_myskills__circle" v-for="skill2 in skill.Skillsbodies" :key="skill2._id">
                                 <div class="skills_myskills_skill__items">
                                         <vue-ellipse-progress 
                                             color="#1565c0"

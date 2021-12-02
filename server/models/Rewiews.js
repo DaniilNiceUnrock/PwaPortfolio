@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 const Rewiews = new Schema({
     name: String,
     body: String,
-    date: Date
+    date: String
 });
 
-module.exports = mongoose.model('Rewiews', Rewiews);
+module.exports = mongoose.model('rewiews', Rewiews);
