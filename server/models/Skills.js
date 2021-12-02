@@ -5,7 +5,7 @@ const { Schema } = mongoose;
 
 const Skills = new Schema({
   name : String,
-  skills2: [{
+  skillsBody: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'skillsBody'
    }
