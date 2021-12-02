@@ -7,4 +7,4 @@ const Rewiews = new Schema({
     date: String
 });
 
-module.exports = mongoose.model('rewiews', Rewiews);
+module.exports = mongoose.model('Rewiews', Rewiews);

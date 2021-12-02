@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-const rewiews = require('../models/Rewiews');
+const Rewiews = require('../models/Rewiews');
 
 router.get('/', async (req, res) => {
-    res.json(await rewiews.find());
+    res.json(await Rewiews.find());
 });
 
 router.post('/', async (req, res) => {
@@ -14,16 +14,16 @@ router.post('/', async (req, res) => {
 });
 
 router.get('/:id', async (req, res) => {
-    res.json(await rewiews.findById(req.params.id));
+    res.json(await Rewiews.findById(req.params.id));
 });
 
 router.put('/:id', async (req, res) => {
-    await rewiews.findByIdAndUpdate(req.params.id, req.body);
+    await Rewiews.findByIdAndUpdate(req.params.id, req.body);
     res.json({state: 'updated'});
 });
 
 router.delete('/:id', async (req, res) => {
-    await rewiews.findByIdAndRemove(req.params.id);
+    await Rewiews.findByIdAndRemove(req.params.id);
     res.json({state: 'deleted'});
 });
 
