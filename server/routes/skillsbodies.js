@@ -1,19 +1,19 @@
 const express = require('express');
 const router = express.Router();
 
-const SkillsBody = require('../models/Skillsbodies');
+const Skillsbodies = require('../models/Skillsbodies');
 
 router.get('/', async (req, res) => {
-    res.json(await SkillsBody.find());
+    res.json(await Skillsbodies.find());
 });
 
 router.post('/', async (req, res) => {
-    const skillsBody = new SkillsBody(req.body);
+    const skillsbodies = new Skillsbodies(req.body);
     await skillsBody.save();
     res.json({state: 'Cкилл добавлен'});
 });
 router.delete('/:id', async (req, res) => {
-    await SkillsBody.findByIdAndRemove(req.params.id);
+    await skillsbodies.findByIdAndRemove(req.params.id);
     res.json({state: 'Удалено'});
 });
 

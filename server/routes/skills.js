@@ -5,7 +5,7 @@ const Skills = require('../models/Skills');
 
 
 router.get('/', async (req, res) => { 
-    const skills = await Skills.find().populate("skillsbodies");
+const skills = await Skills.find().populate("Skillsbodies");
     res.json(skills);
 });
 
