@@ -8,9 +8,11 @@
                 <slide  v-for="review in Reviews" :key="review.id">
                     <div class="slide">
                         <div class="slide_author">
-                            <img :src="`https://webdev-api.loftschool.com/`+review.photo" alt="" class="slide_author__image" width="100px" height="100px">
+                            <!--<img :src="`https://webdev-api.loftschool.com/`+review.photo" alt="" class="slide_author__image" width="100px" height="100px">-->
+                            <img src="../../assets/reviews/man.png" alt="" class="slide_author__image" width="100px" height="100px">
                             <p class="slide_author__name">{{review.name}}</p>
                         </div>
+                        
                         <div class="slide_body">
                             <div class="slide_body__text">{{review.body}}</div>
                             <div class="slide_body__date">{{review.publishedAt}}</div>

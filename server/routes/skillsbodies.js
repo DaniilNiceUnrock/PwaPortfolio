@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     const skillsbodies = new Skillsbodies(req.body);
-    await skillsBody.save();
+    await skillsbodies.save();
     res.json({state: 'Cкилл добавлен'});
 });
 router.delete('/:id', async (req, res) => {

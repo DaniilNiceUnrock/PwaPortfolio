@@ -19,13 +19,13 @@ export default new Vuex.Store({
   },
   actions: {
     async getMySkills({ commit }) {
-      axios.get('api/skills')
+      axios.get('http://104.198.229.231/api/skills')
           .then(response => {
               commit('SET_MYSKILLS', response.data);
       })
     },
     async getReviews({ commit }) {
-      axios.get('api/rewiews')
+      axios.get('http://104.198.229.231/api/rewiews')
           .then(response => {
               commit('SET_REVIEWS', response.data)
       })
