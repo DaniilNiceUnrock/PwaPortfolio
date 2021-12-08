@@ -7,7 +7,7 @@ const cors = require('cors')
 const app = express();
 
 //console.log("порт");
-app.set('port', 3000);
+app.set('port', 8080);
 app.listen(app.get('port'), () => {
     console.log(`[OK] Server is running on http://104.198.229.231/:${app.get('port')}`);
 });
