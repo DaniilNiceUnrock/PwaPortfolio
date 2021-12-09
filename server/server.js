@@ -2,14 +2,17 @@ const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const path = require('path');
-const cors = require('cors')
-
+const cors = require('cors');
+var http = require('http');
+var https = require('https');
+const enforce = require('express-sslify');
 const app = express();
 
 //console.log("порт");
+app.use(enforce.HTTPS({ trustXForwardedHostHeader: true }))
 app.set('port', 8080);
-app.listen(app.get('port'), () => {
-    console.log(`[OK] Server is running on http://104.198.229.231/:${app.get('port')}`);
+https.createServer(app).listen(app.get('port'), () => {
+    console.log(`[OK] Server is running on https://192.168.0.11:8080/api/skills:${app.get('port')}`);
 });
 
 
