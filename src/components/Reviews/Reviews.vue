@@ -1,5 +1,5 @@
 <template >      
-        <div class="Reviews" v-if="isMobile()">
+        <div class="Reviews" v-if="isMobile()" id="Reviews">
             <span class="Reviews_h2">
                 Отзывы обо мне
             </span>

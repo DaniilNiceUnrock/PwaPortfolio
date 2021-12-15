@@ -1,17 +1,18 @@
 // vue.config.js
 module.exports = {
   devServer: {
-    proxy: {
-      '^/api': {
-        target: "http://104.198.229.231",
+    proxy: 'https://rest.ponomarevdaniil.fun"'
+   //proxy: {
+      //'^/api': {
+        //target: "http://rest.ponomarevdaniil.fun",
         /*target: "http://104.198.229.231",*/
         /*target: "https://ponomarevdaniil.fun",*/
-        ws: true,
-        secure:false,
-        changeOrigin: true,
+        //ws: true,
+        //secure:false,
+       // changeOrigin: true,
        
-      }
-    }
+     // }
+   // }
   },
     runtimeCompiler: true,
     

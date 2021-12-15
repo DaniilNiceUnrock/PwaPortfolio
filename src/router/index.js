@@ -20,6 +20,12 @@ const routes = [
     component: () => import('../admin/Home.vue'),
     meta: {keepAlive: true}
   },
+  {
+    path: '/request',
+    name: 'request',
+    component: () => import('../views/Request.vue'),
+    meta: {keepAlive: true}
+  },
  /* {
     path: '/about',
     name: 'About',

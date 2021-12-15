@@ -1,14 +1,19 @@
 .header {
 	//background-image: url("../../assets/bg/bg3.jpg");
-	//background-color: #172F51;
+	background-color: #172F51;
 	padding-top: 2%;
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: flex;
     flex-direction: column;
+		&_h3 {
+			color: white;
+			font-size: 2rem;
+		}
 }
+
 .menu {
-	display: flex;
+	display: none;
 	flex-direction: row;
 
 	justify-content: flex-end;

@@ -1,6 +1,6 @@
 <template>
     <div class="visit">
-        <Header/>
+
         <BurgerMenu/>
         <div class="preview">
             <!--<div class="preview_image">
@@ -22,6 +22,10 @@
                                 <img class="header_socials__img" src="../../assets/socials/instagram.webp" width="40px" height="40px" alt="">
                             </a>
                 </div>
+                <div class="preview_info_request">
+                    <router-link  to="/request"> Оставить заявку</router-link>
+                </div>
+        
             </div>
             <div class="header_toMain" @click="toMain"> 
                 <img class="header_socials__img" src="../../assets/arrow_down.webp" alt="" width="40px" height="40px">
@@ -40,7 +44,6 @@ export default {
         }
     },
     components: {
-        Header: () => import("@/components/Header/Header.vue") ,
         BurgerMenu: () => import("@/components/BurgerMenu/BurgerMenu.vue") ,
     },
     mounted() {

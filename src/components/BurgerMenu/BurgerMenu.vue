@@ -10,7 +10,7 @@
             <span>Работы</span> 
         </a>
 
-        <a active-class="active" href="#reviews">
+        <a active-class="active" href="#Reviews">
             <span>Отзывы</span> 
         </a>
         <a id="GitHub" href="https://github.com/DaniilNiceUnrock" target="_blank"> 

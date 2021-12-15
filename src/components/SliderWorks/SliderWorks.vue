@@ -1,6 +1,6 @@
 <template>
-    <intersect @enter="visible = true" @leave="visible = true">
-        <div class="main_SliderWorks">
+    <intersect @enter="visible = true" @leave="visible = true" >
+        <div class="main_SliderWorks" id="MyWorks">
             <h2 class="main_SliderWorks_head"> Мои работы</h2>
             <div class="containertest" v-if="visible" >
                 <div v-for="slide in slides" 
