@@ -17,7 +17,13 @@ const routes = [
   {
     path: '/admin',
     name: 'Admin',
-    component: () => import('../admin/Home.vue'),
+    component: () => import('../admin/views/Home.vue'),
+    meta: {keepAlive: true}
+  },
+  {
+    path: '/admin/request',
+    name: 'AdminSkills',
+    component: () => import('../admin/views/Request.vue'),
     meta: {keepAlive: true}
   },
   {
@@ -26,6 +32,7 @@ const routes = [
     component: () => import('../views/Request.vue'),
     meta: {keepAlive: true}
   },
+
  /* {
     path: '/about',
     name: 'About',

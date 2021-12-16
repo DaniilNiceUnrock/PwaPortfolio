@@ -8,6 +8,7 @@ export default new Vuex.Store({
   state: {
     MySkills: [],
     Reviews: [],
+    Requests: [],
   },
   mutations: {
     SET_MYSKILLS(state, MySkills) {
@@ -15,6 +16,9 @@ export default new Vuex.Store({
     },
     SET_REVIEWS(state, Reviews) {
       state.Reviews = Reviews
+    },
+    SET_REQUESTS(state, Requests) {
+      state.Requests = Requests
     }
   },
   actions: {
@@ -28,6 +32,12 @@ export default new Vuex.Store({
       axios.get('https://rest.ponomarevdaniil.fun/api/rewiews')
           .then(response => {
               commit('SET_REVIEWS', response.data)
+      })
+    },
+    async getRequests({ commit }) {
+      axios.get('https://rest.ponomarevdaniil.fun/api/request')
+          .then(response => {
+              commit('SET_REQUESTS', response.data)
       })
     },
   },
