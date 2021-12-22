@@ -15,25 +15,12 @@ const routes = [
     meta: {keepAlive: true}
   },
   {
-    path: '/admin',
-    name: 'Admin',
-    component: () => import('../admin/views/Home.vue'),
-    meta: {keepAlive: true}
-  },
-  {
-    path: '/admin/request',
-    name: 'AdminSkills',
-    component: () => import('../admin/views/Request.vue'),
-    meta: {keepAlive: true}
-  },
-  {
     path: '/request',
     name: 'request',
     component: () => import('../views/Request.vue'),
     meta: {keepAlive: true}
   },
-
- /* {
+  /* {
     path: '/about',
     name: 'About',
     // route level code-splitting

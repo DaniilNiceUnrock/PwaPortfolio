@@ -11,9 +11,9 @@
         </div> --> 
   
         <div class="category_item" v-for="category in categories" :key="category.id">
-            <a :href="category.href" class="category_item__a"> 
+            <router-link :to="category.href" class="category_item__a"> 
                 <h1 class="category_item__h1">{{category.title}}</h1>
-            </a>
+            </router-link >
         </div>
      
     </div>
@@ -24,7 +24,7 @@
 
 <script>
 
-    export default {
+export default {
  data() {
    return {
      categories: [
