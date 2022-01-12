@@ -1,7 +1,7 @@
 <template>
 
     <div class="header" >
-		<p class="header_h3"> </p>
+		<p class="header_h3"> {{this.$route.meta.title}} </p>
 		<div class="menu">
 			<div class="menu_about"></div>
 			<div class="menu_hrefs">

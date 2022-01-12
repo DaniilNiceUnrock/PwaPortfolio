@@ -78,3 +78,87 @@ input {
             }
         }
 }
+
+@media screen and (max-width: $tablets) {
+    input {
+        outline:none;
+        font-size: 17px;
+    }
+    .request {
+        display: flex;
+        justify-content: center;
+            &_h2 {
+                white-space: nowrap;
+                margin: 6px 0;
+                padding-bottom: 6px;
+                width: 76%;
+                color: #78788c;
+                border-bottom: 3px solid #78788c;
+            }
+            &_form {
+                display: flex;
+                flex-direction: column;
+                margin: 6%;
+                padding: 1%;
+                min-width: 150px;
+                width: 75%;
+                background: #fff;
+                border-radius: 8px;
+             
+                box-shadow: 0 0 40px -10px #000;
+                &__name  {
+                    padding: 5px 0 5px 0;
+                    margin: 15px 0 10px 0;
+                    transition: all 500ms ease-in-out;
+                    border: 0;
+                    border-bottom: 2px solid #bebed2;
+                        &:focus {
+                            border-bottom: 2px solid #78788c;
+                        }
+                }
+                &__email  {
+                    padding: 5px 0 5px 0;
+                    margin: 15px 0 10px 0;
+                    transition: all 500ms ease-in-out;
+                    border: 0;
+                    border-bottom: 2px solid #bebed2;
+                        &:focus {
+                            border-bottom: 2px solid #78788c;
+                        }
+                }
+                &__phone  {
+                    padding: 5px 0 5px 0;
+                    margin: 15px 0 10px 0;
+                    transition: all 500ms ease-in-out;
+                    border: 0;
+                    border-bottom: 2px solid #bebed2;
+                        &:focus {
+                            border-bottom: 2px solid #78788c;
+                        }
+                }
+                &__address {
+                    padding: 5px 0 5px 0;
+                    margin: 15px 0 10px 0;
+                    transition: all 500ms ease-in-out;
+                    border: 0;
+                    border-bottom: 2px solid #bebed2;
+                        &:focus {
+                            border-bottom: 2px solid #78788c;
+                        }
+                }
+                &__send {
+                    padding: 8px 12px;
+                    margin: 8px 0 0;
+                    border: 2px solid #78788c;
+                    background: 0;
+                    color: #5a5a6e;
+                    cursor: pointer;
+                    transition: all 500ms ease-in-out;
+                        &:hover {
+                            background: #78788c;
+                            color: #fff;
+                        }
+                }
+            }
+    }	
+}

@@ -6,24 +6,50 @@
         
             <carousel :per-page="items"  :loop="true" :autoplay="false" :navigationEnabled="false" :navigate-to="someLocalProperty" :mouse-drag="true" v-if="Reviews.length" >
                 <slide  v-for="review in Reviews" :key="review.id">
-                    <div class="slide">
+                    <div class="slide" v-if="review.status === true">
                         <div class="slide_author">
                             <!--<img :src="`https://webdev-api.loftschool.com/`+review.photo" alt="" class="slide_author__image" width="100px" height="100px">-->
                             <img src="../../assets/reviews/man.png" alt="" class="slide_author__image" width="100px" height="100px">
                             <p class="slide_author__name">{{review.name}}</p>
                         </div>
                         
-                        <div class="slide_body">
+                        <div class="slide_body"> 
                             <div class="slide_body__text">{{review.body}}</div>
                             <div class="slide_body__date">{{review.publishedAt}}</div>
                         </div>
-                    </div>                 
+                       
+                    </div>    
+                                     
                 </slide>
+
+                <slide>
+                    <div class="slide" >
+                        <div class="slide_add" v-if="!reviewadd"> 
+                            <p>Оставить отзыв</p>
+                            <button class="slide_add_buttonnewrev" @click="AddRevievShowForm"></button>
+                        </div>
+                        <div class="slide_add_form" v-else>
+                            <form @submit.prevent="AddReviev" class="addreview_form">
+
+                                <input v-model="name" type="text" name="name" id="name" placeholder="name"  class="addreview_form_input" required/>     
+                                <input v-model="body" type="text" name="body" id="body" placeholder="body" class="addreview_form_input" required/>
+                                
+                                <button  type="submit" value="Go" style="float: left" :class="{button_disabled : !isButtonDisabled}" class="addreview_form_button" >Добавить</button>
+                                <button  @click="AddRevievShowForm" value="Back" style="float: left" class="addreview_form_button" >Отмена</button>
+
+                            </form>
+
+                        </div>
+                    </div>    
+                </slide>
+
             </carousel>
         </div>
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 import Intersect from 'vue-intersect'
 import { Carousel, Slide } from 'vue-carousel';
 
@@ -32,9 +58,16 @@ export default {
     data: () => ({
         val: 0,
         visible: false,
+        reviewadd: false,
         items: 0,
+        name: "",
+        body: "",
+        status: false,
     }),
     methods: {
+        ...mapActions({
+            addNewReview: "addReview",           
+        }),
         isMobile() {
             if (screen.width <= 768) {
                 this.items = 1;
@@ -44,6 +77,25 @@ export default {
                 return true
             }
         },  
+        AddRevievShowForm () {
+            this.reviewadd = !this.reviewadd;
+        },
+        async AddReviev() {
+            let BodyReview = {
+                name: this.name,
+                body: this.body,
+                status: this.status,
+            };
+            try {
+                await this.addNewReview(BodyReview);
+                this.name = '';
+                this.body = '';
+                //this.$emit('close');
+                alert("Отзыв добавлен");
+            } catch (error) {
+                alert('nnononono');
+            }
+        },
     },
     created: {
 
@@ -54,7 +106,10 @@ export default {
     computed: {
         Reviews() {
             return this.$store.state.Reviews
-        }
+        },
+        isButtonDisabled () {
+            return this.name && this.body;
+        },
     },
     components: {
         Carousel,

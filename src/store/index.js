@@ -14,6 +14,7 @@ export default new Vuex.Store({
     SET_MYSKILLS(state, MySkills) {
       state.MySkills = MySkills
     },
+   
     SET_REVIEWS(state, Reviews) {
       state.Reviews = Reviews
     },
@@ -34,6 +35,16 @@ export default new Vuex.Store({
               commit('SET_REVIEWS', response.data)
       })
     },
+    async addReview({commit}, newReview) {
+
+      console.log(newReview);
+      try {
+          const { data } = await axios.post('https://rest.ponomarevdaniil.fun/api/rewiews', newReview);
+          //commit('ADD_REVIEW', newReview);                
+      } catch (err) {
+          //commit('ADD_REVIEW', err)
+      }
+  },
     async getRequests({ commit }) {
       axios.get('https://rest.ponomarevdaniil.fun/api/request')
           .then(response => {

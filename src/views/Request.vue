@@ -1,6 +1,7 @@
 <template>
   <div>
     <Header/>
+    
       <div class="request">
         <form @submit.prevent="sendData" class="request_form">
             <h2 class="request_h2"> Оставить заявку </h2>
