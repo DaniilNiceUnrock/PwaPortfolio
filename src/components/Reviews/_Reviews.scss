@@ -6,6 +6,7 @@
   }
 }
 .slide {
+  align-items: center;
   min-height: 260px;
   padding: 5% 5% 0 5%;
   display: flex;
@@ -67,7 +68,40 @@
       }
   }
 }
-
+.addreview_form {
+  display: flex;
+  flex-direction: column;
+  &__p {
+    margin-bottom: 10%;
+  }
+  &__input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    color: black;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    outline: none;
+    padding: 5px 0;
+    width: 100%;
+  }
+  &__button {
+    background: #03a9f4;
+    font-size: 11px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    outline: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 2% 2% 0% 2%;
+    display: inline-block;
+  }
+}
 @media screen and (max-width: $bigtablets) {
   .Reviews {
     max-width: 100% !important;

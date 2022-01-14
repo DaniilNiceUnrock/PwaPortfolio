@@ -30,12 +30,13 @@
                         </div>
                         <div class="slide_add_form" v-else>
                             <form @submit.prevent="AddReviev" class="addreview_form">
+                                <p class="addreview_form__p">Новый отзыв</p>
 
-                                <input v-model="name" type="text" name="name" id="name" placeholder="name"  class="addreview_form_input" required/>     
-                                <input v-model="body" type="text" name="body" id="body" placeholder="body" class="addreview_form_input" required/>
+                                <input v-model="name" type="text" name="name" id="name" placeholder="Ваше имя"  class="addreview_form__input" required/>     
+                                <input v-model="body" type="text" name="body" id="body" placeholder="Отзыв" class="addreview_form__input" required/>
                                 
-                                <button  type="submit" value="Go" style="float: left" :class="{button_disabled : !isButtonDisabled}" class="addreview_form_button" >Добавить</button>
-                                <button  @click="AddRevievShowForm" value="Back" style="float: left" class="addreview_form_button" >Отмена</button>
+                                <button  type="submit" value="Go" style="float: left" :class="{button_disabled : !isButtonDisabled}" class="addreview_form__button" >Добавить</button>
+                                <button  @click="AddRevievShowForm" value="Back" style="float: left" class="addreview_form__button" >Отмена</button>
 
                             </form>
 
@@ -48,6 +49,7 @@
 </template>
 
 <script>
+import Swal from 'sweetalert2'
 import { mapActions } from "vuex";
 
 import Intersect from 'vue-intersect'
@@ -90,15 +92,19 @@ export default {
                 await this.addNewReview(BodyReview);
                 this.name = '';
                 this.body = '';
-                //this.$emit('close');
-                alert("Отзыв добавлен");
+                
+                 Swal.fire(
+                    'Успешно! Спасибо за отзыв! ',
+                    'Отзыв отправлен на модерацию!',
+                    'success'
+                ).then(() => {
+                    this.reviewadd = !this.reviewadd;
+                });
+
             } catch (error) {
-                alert('nnononono');
+                alert('Ошибка! ');
             }
         },
-    },
-    created: {
-
     },
     async mounted() {  
         this.$store.dispatch("getReviews");

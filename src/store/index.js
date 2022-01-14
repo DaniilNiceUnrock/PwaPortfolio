@@ -30,7 +30,7 @@ export default new Vuex.Store({
       })
     },
     async getReviews({ commit }) {
-      axios.get('https://rest.ponomarevdaniil.fun/api/rewiews')
+      axios.get('https://rest.ponomarevdaniil.fun/api/rewiews/true')
           .then(response => {
               commit('SET_REVIEWS', response.data)
       })
