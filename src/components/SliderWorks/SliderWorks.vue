@@ -1,5 +1,5 @@
 <template>
-    <intersect @enter="visible = true" @leave="visible = true" >
+    <intersect @enter="visible = true" @leave="visible = false" >
         <div class="main_SliderWorks" id="MyWorks">
             <h2 class="main_SliderWorks_head"> Мои работы</h2>
             <div class="containertest" v-if="visible" >

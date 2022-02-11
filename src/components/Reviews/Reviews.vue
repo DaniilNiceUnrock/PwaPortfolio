@@ -9,7 +9,7 @@
                     <div class="slide" v-if="review.status === true">
                         <div class="slide_author">
                             <!--<img :src="`https://webdev-api.loftschool.com/`+review.photo" alt="" class="slide_author__image" width="100px" height="100px">-->
-                            <img src="../../assets/reviews/man.png" alt="" class="slide_author__image" width="100px" height="100px">
+                            <img v-lazy='img[0].src' alt="" class="slide_author__image" width="100px" height="100px">
                             <p class="slide_author__name">{{review.name}}</p>
                         </div>
                         
@@ -65,6 +65,9 @@ export default {
         name: "",
         body: "",
         status: false,
+        img:[
+            {src: require('@/assets/reviews/man.png')} 
+        ],
     }),
     methods: {
         ...mapActions({

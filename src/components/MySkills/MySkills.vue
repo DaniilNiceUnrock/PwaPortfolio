@@ -1,11 +1,12 @@
 <template >
 
+
     <intersect @enter="visible = true" @leave="visible = true">
         <div class="container_skills" id="MySkills">
             <h2 class="MySkills_head">Мои навыки</h2>
             <div class="skills" >
-                <div class="skills_img">
-                    <img class="skills_img__img" src="../../assets/bg/back2.webp" alt="">
+                <div class="skills_img"> 
+                    <img class="skills_img__img" v-lazy='img[0].src' alt="">
                 </div>
                 <div class="skills_block" v-if="MySkills.length">
                     <div class="skills_myskills" v-for="skill in MySkills" :key="skill._id" >
@@ -34,12 +35,16 @@
             
         </div>
     </intersect>
+
 </template>
 
 <script>
 import Intersect from 'vue-intersect';
 export default {
     data: () => ({
+        img:[
+            {src: require('@/assets/bg/back2.webp')}
+        ],
         val: 0,
         visible: false,
     }),
@@ -54,6 +59,9 @@ export default {
     components: {
         Intersect ,
     },
+    methods: {
+       
+    }
     
 }
 </script>
