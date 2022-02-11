@@ -11,7 +11,7 @@ app.use(cors());
 app.use(morgan('dev')); // для отсмотра запросов
 
 
-app.set('port', 5000);
+app.set('port', 3000);
 app.listen(app.get('port'), () => {
     console.log(`[OK] Server is running on https://ponomarevdaniil.fun/:${app.get('port')}`);
 });
