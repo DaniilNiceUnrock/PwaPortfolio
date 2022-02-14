@@ -1,6 +1,7 @@
 // vue.config.js
 module.exports = {
   devServer: {
+    port: 3000,
     proxy: 'https://rest.ponomarevdaniil.fun"'
    //proxy: {
       //'^/api': {
