@@ -1,10 +1,9 @@
 <template>
-    <intersect @enter="visible = true" @leave="visible = false" >
+    <intersect @enter="visible = true" @leave="visible = true" >
         <div class="main_SliderWorks" id="MyWorks">
             <h2 class="main_SliderWorks_head"> Мои работы</h2>
             <div class="containertest" v-if="visible" >
                 <div v-for="slide in slides" 
-                
                     :key="slide.id"  
                     class="slide" 
                     :class="{ active: activeItem === slide.id}" 
@@ -25,7 +24,7 @@
     export default {
         data() {
             return {
-                visible: false,
+                visible: true,
                 activeItem: 3,
                 slides: [
                     {id: 1, title:'Доставка цветов', color: '#ED9D22', href: 'https://www.dostavka-tsvetov.com/', image: require('@/assets/MyWorks/dc.webp')}, 
@@ -42,7 +41,6 @@
         },
         methods: {
             scrollToMe(id) {  
-                console.log(id);
                 if(id) {
                     setTimeout(() => {
                         console.log('скролл');
