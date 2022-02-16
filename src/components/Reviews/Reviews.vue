@@ -1,15 +1,15 @@
 <template >      
-        <div class="Reviews" v-if="isMobile()" id="Reviews">
+        <div class="Reviews" v-if="isMobile() && Reviews.length" id="Reviews">
             <span class="Reviews_h2">
                 Отзывы обо мне
             </span>
         
-            <carousel :per-page="items"  :loop="true" :autoplay="false" :navigationEnabled="false" :navigate-to="someLocalProperty" :mouse-drag="true" v-if="Reviews.length" >
+            <carousel :per-page="items" :speed="700" :loop="true" :autoplay="true" :navigationEnabled="true" :navigate-to="someLocalProperty" :mouse-drag="false" v-if="Reviews.length" >
                 <slide  v-for="review in Reviews" :key="review.id">
                     <div class="slide" v-if="review.status === true">
                         <div class="slide_author">
-                            <!--<img :src="`https://webdev-api.loftschool.com/`+review.photo" alt="" class="slide_author__image" width="100px" height="100px">-->
-                            <img v-lazy='img[0].src' alt="" class="slide_author__image" width="100px" height="100px">
+                            <!--<img :src="`https://webdev-api.loftschool.com/`+review.photo" alt="123" class="slide_author__image" width="100px" height="100px">-->
+                            <img v-lazy='img[0].src' alt="Фото" class="slide_author__image" width="100px" height="100px">
                             <p class="slide_author__name">{{review.name}}</p>
                         </div>
                         
@@ -17,9 +17,7 @@
                             <div class="slide_body__text">{{review.body}}</div>
                             <div class="slide_body__date">{{review.publishedAt}}</div>
                         </div>
-                       
-                    </div>    
-                                     
+                    </div>           
                 </slide>
 
                 <slide>
@@ -43,7 +41,6 @@
                         </div>
                     </div>    
                 </slide>
-
             </carousel>
         </div>
 </template>
@@ -69,16 +66,21 @@ export default {
             {src: require('@/assets/reviews/man.png')} 
         ],
     }),
+    components: {
+        Carousel,
+        Slide,
+        Intersect ,
+    },
     methods: {
         ...mapActions({
             addNewReview: "addReview",           
         }),
         isMobile() {
-            if (screen.width <= 768) {
+            if (screen.width <= 991) {
                 this.items = 1;
                 return true
             } else {
-                this.items = 2;
+                this.items = 3;
                 return true
             }
         },  
@@ -95,15 +97,13 @@ export default {
                 await this.addNewReview(BodyReview);
                 this.name = '';
                 this.body = '';
-                
-                 Swal.fire(
+                Swal.fire(
                     'Успешно! Спасибо за отзыв! ',
                     'Отзыв отправлен на модерацию!',
                     'success'
                 ).then(() => {
                     this.reviewadd = !this.reviewadd;
                 });
-
             } catch (error) {
                 alert('Ошибка! ');
             }
@@ -120,11 +120,7 @@ export default {
             return this.name && this.body;
         },
     },
-    components: {
-        Carousel,
-        Slide,
-        Intersect ,
-    }
+    
 }
 </script>
 

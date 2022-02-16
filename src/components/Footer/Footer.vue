@@ -7,13 +7,13 @@
   </div>
   <div class="footer_socials">
       <a class="footer_socials__a" href="https://t.me/DaniiPonomarev"  target="_blank"> 
-        <img class="footer_socials__img" src="../../assets/socials/telegram.webp" width="40px" height="40px" alt="">
+        <img class="footer_socials__img" src="../../assets/socials/telegram.webp" width="40px" height="40px" alt="telegram">
       </a>
       <a class="footer_socials__a" href="mailto:daniilponomarevinfo@gmail.com" target="_blank"> 
-        <img class="footer_socials__img" src="../../assets/socials/mail.webp" width="40px" height="40px" alt="">
+        <img class="footer_socials__img" src="../../assets/socials/mail.webp" width="40px" height="40px" alt="e-mail">
       </a>
       <a class="footer_socials__a" href="https://www.instagram.com/" target="_blank"> 
-        <img class="footer_socials__img" src="../../assets/socials/instagram.webp" width="40px" height="40px" alt="">
+        <img class="footer_socials__img" src="../../assets/socials/instagram.webp" width="40px" height="40px" alt="instagram">
       </a>
   </div>
   <div class="footer_termius">

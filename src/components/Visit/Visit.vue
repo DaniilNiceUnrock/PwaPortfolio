@@ -13,13 +13,13 @@
                 </div>
                 <div class="preview_info_social">
                             <a class="header_socials__a" href="https://t.me/DaniiPonomarev" target="_blank"> 
-                                <img class="header_socials__img" src="../../assets/socials/telegram.webp" width="40px" height="40px" alt="">
+                                <img class="header_socials__img" src="../../assets/socials/telegram.webp" width="40px" height="40px" alt="telegram">
                             </a>
                             <a class="header_socials__a" href="mailto:daniilponomarevinfo@gmail.com" target="_blank"> 
-                                <img class="header_socials__img" src="../../assets/socials/mail.webp" width="40px" height="40px" alt="">
+                                <img class="header_socials__img" src="../../assets/socials/mail.webp" width="40px" height="40px" alt="mail">
                             </a>
                             <a class="header_socials__a" href="https://www.instagram.com/" target="_blank"> 
-                                <img class="header_socials__img" src="../../assets/socials/instagram.webp" width="40px" height="40px" alt="">
+                                <img class="header_socials__img" src="../../assets/socials/instagram.webp" width="40px" height="40px" alt="instagram">
                             </a>
                 </div>
                 <div class="preview_info_request">
@@ -28,7 +28,7 @@
         
             </div>
             <div class="header_toMain" @click="toMain"> 
-                <img class="header_socials__img" src="../../assets/arrow_down.webp" alt="" width="40px" height="40px">
+                <img class="header_socials__img" src="../../assets/arrow_down.webp" alt="Кнопка Вниз" width="40px" height="40px">
             </div>
         </div>
         
