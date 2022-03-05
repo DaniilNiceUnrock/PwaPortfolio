@@ -4,11 +4,11 @@
     
       <div class="request">
         <form @submit.prevent="sendData" class="request_form">
-            <h2 class="request_h2"> Оставить заявку </h2>
-            <input v-model="name" id="name" type="text" class="request_form__name" placeholder="Имя"  required>
+            <h2 class="request_h2"> Submit your application</h2>
+            <input v-model="name" id="name" type="text" class="request_form__name" placeholder="Name"  required>
             <input v-model="email" id="email" type="email" class="request_form__email" placeholder="E-mail"  required>  
-            <masked-input v-model="phone" mask="\+\7 (111) 111-11-11" placeholder="Телефон"  class="request_form__phone" required/>
-            <input v-model="address" id="address" type="text" class="request_form__address" placeholder="Адресс"  required>   
+            <masked-input v-model="phone" mask="\+\7 (111) 111-11-11" placeholder="Phone"  class="request_form__phone" required/>
+            <input v-model="address" id="address" type="text" class="request_form__address" placeholder="Address"  required>   
             
             <input type="submit" class="request_form__send" value="Send" placeholder="">
         </form>
@@ -67,9 +67,9 @@ methods: {
       
     )
     Swal.fire(
-      'Успешно!',
-      'Нажмите "ок" для перехода на главную страницу!',
-      'success'
+      'Successfully!',
+      'Click "ok" to go to the main page!',
+      'Success'
     ).then(() => {
       this.$router.push('/'); 
     });

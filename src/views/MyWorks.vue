@@ -1,6 +1,6 @@
 <template>
       <div data-aos-duration="1600" data-aos="zoom-in" >
-        <h2> Мои работы </h2>
+        <h2> My works </h2>
           <SliderWorks/>
       </div>
 </template>

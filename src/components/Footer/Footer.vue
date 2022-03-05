@@ -1,9 +1,9 @@
 <template>
 <footer class="footer">
-  <div class="footer_date">© 2021</div>
+  <div class="footer_date">© 2022</div>
   <div class="footer_nameme">
-    <p class="footer_nameme__name">Пономарев Даниил</p>
-    <p class="footer_nameme__who">Личный сайт веб-разработчика</p>
+    <p class="footer_nameme__name">Ponomarev Daniil</p>
+    <p class="footer_nameme__who">Web developer's personal website</p>
   </div>
   <div class="footer_socials">
       <a class="footer_socials__a" href="https://t.me/DaniiPonomarev"  target="_blank"> 
@@ -17,7 +17,7 @@
       </a>
   </div>
   <div class="footer_termius">
-    <p class="footer_termius__text">Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете</p>
+    <p class="footer_termius__text">Always write code as if it would be accompanied by a violent psychopath who knows where you live.</p>
     <p class="footer_termius__who">Martin Golding</p>
   </div>
 </footer>

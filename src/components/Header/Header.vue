@@ -6,16 +6,16 @@
 			<div class="menu_about"></div>
 			<div class="menu_hrefs">
 				<a class="href" href="#about">
-					<span>Обо мне</span> 
+					<span>About me</span> 
 				</a>
 				<a class="href" href="#MySkills">
-					<span>Навыки</span> 
+					<span>Skills</span> 
 				</a>
 				<a  class="href" href="#MyWorks">
-					<span>Работы  </span> 
+					<span>Works  </span> 
 				</a>
 				<a class="href" href="#reviews">
-					<span>Отзывы</span> 
+					<span>Reviews</span> 
 				</a>
 				<a id="GitHub" href="https://github.com/DaniilNiceUnrock" class="href" target="_blank"> 
 					<span>GitHub</span>  

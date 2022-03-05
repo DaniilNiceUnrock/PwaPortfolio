@@ -3,10 +3,10 @@
 
     <intersect @enter="visible = true" @leave="visible = true">
         <div class="container_skills" ref="MySkills" id="123"  v-if="MySkills.length">
-            <h2 class="MySkills_head">Мои навыки</h2>
+            <h2 class="MySkills_head">My skills</h2>
             <div class="skills" >
                 <div class="skills_img"> 
-                    <img class="skills_img__img" v-lazy='img[0].src' alt="Мои навыки">
+                    <img class="skills_img__img" v-lazy='img[0].src' alt="My skills">
                 </div>
                 <div class="skills_block" >
                     <div class="skills_myskills" v-for="skill in MySkills" :key="skill._id" >
@@ -32,7 +32,7 @@
                 </div>
             </div>
         </div>
-        <div v-else> <img src="@/assets/Spin.gif" alt="Прелоэдер"></div>
+        <div v-else> <img src="@/assets/Spin.gif" alt="Preloader"></div>
     </intersect>
 
 </template>

@@ -19,7 +19,7 @@ const routes = [
     name: 'request',
     component: () => import('../views/Request.vue'),
     meta: {
-      title: "Оставить заявку на создание сайта",
+      title: "Leave a request to create a site",
       keepAlive: true
     }
   },

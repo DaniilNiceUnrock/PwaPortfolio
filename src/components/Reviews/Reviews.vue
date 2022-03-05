@@ -1,7 +1,7 @@
 <template >      
         <div class="Reviews" v-if="isMobile() && Reviews.length" id="Reviews">
             <span class="Reviews_h2">
-                Отзывы обо мне
+                Reviews about me
             </span>
         
             <carousel :per-page="items" :speed="700" :loop="true" :autoplay="true" :navigationEnabled="true" :navigate-to="someLocalProperty" :mouse-drag="false" v-if="Reviews.length" >
@@ -23,18 +23,18 @@
                 <slide>
                     <div class="slide" >
                         <div class="slide_add" v-if="!reviewadd"> 
-                            <p>Оставить отзыв</p>
+                            <p>Leave feedback</p>
                             <button class="slide_add_buttonnewrev" @click="AddRevievShowForm"></button>
                         </div>
                         <div class="slide_add_form" v-else>
                             <form @submit.prevent="AddReviev" class="addreview_form">
-                                <p class="addreview_form__p">Новый отзыв</p>
+                                <p class="addreview_form__p">New review</p>
 
                                 <input v-model="name" type="text" name="name" id="name" placeholder="Ваше имя"  class="addreview_form__input" required/>     
                                 <input v-model="body" type="text" name="body" id="body" placeholder="Отзыв" class="addreview_form__input" required/>
                                 
-                                <button  type="submit" value="Go" style="float: left" :class="{button_disabled : !isButtonDisabled}" class="addreview_form__button" >Добавить</button>
-                                <button  @click="AddRevievShowForm" value="Back" style="float: left" class="addreview_form__button" >Отмена</button>
+                                <button  type="submit" value="Go" style="float: left" :class="{button_disabled : !isButtonDisabled}" class="addreview_form__button" >Add</button>
+                                <button  @click="AddRevievShowForm" value="Back" style="float: left" class="addreview_form__button" >Cancel</button>
 
                             </form>
 

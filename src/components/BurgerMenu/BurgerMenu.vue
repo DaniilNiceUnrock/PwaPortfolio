@@ -1,17 +1,17 @@
 <template>
     <component :is="currentMenu" :closeOnNavigation="true" right >
         <a active-class="active" href="#about">
-            <span>Обо мне</span> 
+            <span>About me</span> 
         </a>
         <a active-class="active" href="#MySkills">
-            <span>Навыки</span> 
+            <span>Skills</span> 
         </a>
         <a active-class="active" href="#MyWorks">
-            <span>Работы</span> 
+            <span>Works</span> 
         </a>
 
         <a active-class="active" href="#Reviews">
-            <span>Отзывы</span> 
+            <span>Reviews</span> 
         </a>
         <a id="GitHub" href="https://github.com/DaniilNiceUnrock" target="_blank"> 
             <span>GitHub</span>  

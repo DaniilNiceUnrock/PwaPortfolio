@@ -8,8 +8,8 @@
             </div>-->
             <div class="preview_info">
                 <div class="preview_info_text">
-                    <p class="preview_info_text__name">Пономарев Даниил</p>
-                    <p class="preview_info_text__who">Web разработчик</p>
+                    <p class="preview_info_text__name">Ponomarev Daniil</p>
+                    <p class="preview_info_text__who">Web developer</p>
                 </div>
                 <div class="preview_info_social">
                             <a class="header_socials__a" href="https://t.me/DaniiPonomarev" target="_blank"> 
@@ -23,7 +23,7 @@
                             </a>
                 </div>
                 <div class="preview_info_request">
-                    <router-link  to="/request"> Оставить заявку</router-link>
+                    <router-link  to="/request">Submit your application</router-link>
                 </div>
         
             </div>
