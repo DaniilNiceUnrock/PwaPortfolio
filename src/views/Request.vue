@@ -56,7 +56,7 @@ methods: {
   async sendData() {
     console.log(
        await axios({
-        url: 'https://rest.ponomarevdaniil.fun/api/request',
+        url: 'https://rest.ponomarevdaniil.ru/api/request',
         method: 'post',
         data: {
           name: this.name,

@@ -24,13 +24,13 @@ export default new Vuex.Store({
   },
   actions: {
     async getMySkills({ commit }) {
-      axios.get('https://rest.ponomarevdaniil.fun/api/skills')
+      axios.get('https://rest.ponomarevdaniil.ru/api/skills')
           .then(response => {
               commit('SET_MYSKILLS', response.data);
       })
     },
     async getReviews({ commit }) {
-      axios.get('https://rest.ponomarevdaniil.fun/api/rewiews/true')
+      axios.get('https://rest.ponomarevdaniil.ru/api/rewiews/true')
           .then(response => {
               commit('SET_REVIEWS', response.data)
       })
@@ -39,14 +39,14 @@ export default new Vuex.Store({
 
       console.log(newReview);
       try {
-          const { data } = await axios.post('https://rest.ponomarevdaniil.fun/api/rewiews', newReview);
+          const { data } = await axios.post('https://rest.ponomarevdaniil.ru/api/rewiews', newReview);
           //commit('ADD_REVIEW', newReview);                
       } catch (err) {
           //commit('ADD_REVIEW', err)
       }
   },
     async getRequests({ commit }) {
-      axios.get('https://rest.ponomarevdaniil.fun/api/request')
+      axios.get('https://rest.ponomarevdaniil.ru/api/request')
           .then(response => {
               commit('SET_REQUESTS', response.data)
       })

@@ -28,7 +28,7 @@
                 slides: [
                     {id: 1, title:'Доставка цветов', color: '#ED9D22', href: 'https://www.dostavka-tsvetov.com/', image: require('@/assets/MyWorks/dc.webp')}, 
                     {id: 2, title:'Дары Ямала', color: '#000000', href: 'http://dari-yamala.cw97450.tmweb.ru/',  image: require('@/assets/MyWorks/dy.webp')},
-                    {id: 3, title:'Portfolio', color: '#414C63', href: 'https://my.ponomarevdaniil.fun/',  image: require('@/assets/MyWorks/pf.webp')},
+                    {id: 3, title:'Portfolio', color: '#414C63', href: 'https://my.ponomarevdaniil.ru/',  image: require('@/assets/MyWorks/pf.webp')},
                     {id: 4, title:'Экодом24', color: '#8EC90D', href: 'http://ek24.cw97450.tmweb.ru/',  image: require('@/assets/MyWorks/ek.webp')},
                     {id: 5, title:'Black8', color: '#009788', href: 'https://black8.ru/',  image: require('@/assets/MyWorks/b8.webp')},
                     {id: 6, title:'Фиксиома', color: '#33383E', href: 'https://fixioma.ru/',  image: require('@/assets/MyWorks/fx.webp')},

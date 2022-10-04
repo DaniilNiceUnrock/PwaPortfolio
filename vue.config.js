@@ -2,12 +2,12 @@
 module.exports = {
   devServer: {
     port: 3000,
-    proxy: 'https://rest.ponomarevdaniil.fun"'
+    proxy: 'https://rest.ponomarevdaniil.ru"'
    //proxy: {
       //'^/api': {
-        //target: "http://rest.ponomarevdaniil.fun",
+        //target: "http://rest.ponomarevdaniil.ru",
         /*target: "http://104.198.229.231",*/
-        /*target: "https://ponomarevdaniil.fun",*/
+        /*target: "https://ponomarevdaniil.ru",*/
         //ws: true,
         //secure:false,
        // changeOrigin: true,
